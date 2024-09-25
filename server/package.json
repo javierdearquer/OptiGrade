@@ -21,6 +21,8 @@
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "morgan": "^1.10.0",
-    "object-inspect": "^1.13.2"
+    "object-inspect": "^1.13.2",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
   }
 }

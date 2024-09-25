@@ -7,7 +7,7 @@
         :to="{
           name: 'songs'
         }">
-        TabTracker
+        OptiGrade
       </router-link>
     </v-toolbar-title>
 
@@ -34,17 +34,6 @@
         }">
         Login
       </v-btn>
-      
-      <v-btn 
-        v-if="!$store.state.isUserLoggedIn"
-        flat 
-        dark
-        :to="{
-          name: 'register'
-        }">
-        Sign Up
-      </v-btn>
-      
       <v-btn 
         v-if="$store.state.isUserLoggedIn"
         flat 
@@ -76,6 +65,6 @@ export default {
 }
 
 .home:hover {
-  color: #E9E;
+  color: rgb(0, 0, 0);
 }
 </style>
