@@ -65,6 +65,6 @@ export default {
 }
 
 .home:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(24, 0, 133);
 }
 </style>
