@@ -21,7 +21,11 @@ module.exports = (sequelize,DataTypes) => {
             type: DataTypes.STRING,
             unique: true
         },
-        password: DataTypes.STRING
+        password: DataTypes.STRING,
+        activated: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
+        }
     },{
         hooks:{
             //beforeCreate: hashPassword,
@@ -35,6 +39,11 @@ module.exports = (sequelize,DataTypes) => {
         const isMatch = await bcrypt.compareAsync(password, this.password)
         //console.log(isMatch)
         return isMatch
+    }
+
+    User.prototype.isActive = function () {
+        //console.log(password, this.password)
+        return this.activated
     }
 
     return User

@@ -47,6 +47,13 @@ module.exports = {
                 })
             }
 
+            const isUserActivated = user.isActive()
+            if (!isUserActivated) {
+                return res.status(403).send({
+                    error: 'The user does not have a valid license'
+                })
+            }
+
             const userJson = user.toJSON()
             res.send({
                 user: userJson,
